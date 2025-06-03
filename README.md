@@ -1,6 +1,15 @@
 # RAG-chatbot
 A RAG chatbot in python that can give answers based on uploaded text documents context , it also has a simple web interface in streamlit.
 
+RAG-Enhanced Document Processing Chatbot
+• Developed a production-ready Retrieval-Augmented Generation (RAG) system using LangChain, Streamlit, and local LLM integration
+• Implemented robust document processing pipeline supporting multiple formats (PDF, DOCX, TXT) with intelligent fallback mechanisms
+• Engineered efficient document retrieval system using TF-IDF vectorization and cosine similarity, optimizing for both performance and accuracy
+• Built responsive web interface with Streamlit, featuring real-time chat, document upload capabilities, and persistent conversation history
+• Achieved local deployment capability using Ollama integration, ensuring data privacy and reducing API dependencies
+• Technologies: Python, LangChain, Streamlit, scikit-learn, TF-IDF, Ollama, PyPDF, Document Processing Libraries
+
+
 This project is an innovative implementation of a RAG (Retrieval-Augmented Generation) chatbot system, designed to provide intelligent responses by leveraging both document understanding and conversational capabilities. At its core, the system combines local LLM technology with advanced document processing to create a seamless user experience through both web and command-line interfaces.
 The heart of the system lies in its document processing capabilities, implemented in document_processor.py. This component acts as the brain for document understanding, employing a sophisticated pipeline that can handle multiple document formats including PDFs, Word documents, and plain text files. The document processor uses a two-tier approach for PDFs, first attempting to use the UnstructuredPDFLoader and falling back to PyPDFLoader if needed, ensuring robust document handling. Documents are intelligently chunked into manageable pieces using a RecursiveCharacterTextSplitter, with carefully tuned parameters (500-character chunks with 50-character overlap) to maintain context while optimizing for retrieval accuracy.
 The user interface, built with Streamlit and contained in app.py, provides a modern and intuitive web experience. Users can easily upload documents through a clean interface, engage in real-time chat conversations, and receive responses that are enhanced by the system's understanding of their uploaded documents. The interface maintains conversation history and provides clear feedback through progress indicators and error messages, making it highly user-friendly. For those who prefer command-line interactions, main.py offers a streamlined CLI alternative, maintaining the same powerful conversational capabilities in a more traditional interface.
